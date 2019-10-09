@@ -14,18 +14,18 @@ function generateTable() {
     let _pow = 0;
 
     addToTable(null, null, true); //setuppo la tabella
-    for(let i = 0; i < 24; i++) {
+    for(let i = 0; i < 20; i++) {
         
         if (i % 4 == 0 && i != 0)
             _pow++;
         addToTable(_offset[i % 4] * Math.pow(10, _pow), i);
         
     }
-    addToTable(_ft * 0.01, 1);
-    addToTable(_ft * 0.1, 1);
-    addToTable(_ft, 1);
-    addToTable(_ft * 10, 1);
-    addToTable(_ft * 100, 1);
+    addToTable(Math.round(_ft * 0.01), 1);
+    addToTable(Math.round(_ft * 0.1), 1);
+    addToTable(Math.round(_ft), 1);
+    addToTable(Math.round(_ft * 10), 1);
+    addToTable(Math.round(_ft * 100), 1);
 
 }
 

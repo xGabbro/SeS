@@ -14,23 +14,27 @@
 
 <body>
 
-    <div class="materialDiv">
+    <center>
+        <div class="minimalDiv">
 
-        <input id="r" placeholder="Resistenza">
-        <input id="c" placeholder="Condensatore">
-        <input id="v" placeholder="Voltaggio">
+            <input id="r" placeholder="Resistenza">
+            <input id="c" placeholder="Condensatore">
+            <input id="v" placeholder="Voltaggio">
+
+            <br>
+
+            <a class="minimalButton" href="#result" onclick="generateTable()">Calcola</a>
+
+        </div>
 
         <br>
 
-        <a class="minimalButton" href="#result" onclick="generateTable()">Calcola</a>
+        <div class="minimalDiv">
 
-    </div>
+            <table id="tableResults"></table>
 
-    <div>
-
-        <table id="tableResults"></table>
-
-    </div>
+        </div>
+    </center>
 
 </body>
 

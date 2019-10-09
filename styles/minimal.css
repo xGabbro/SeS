@@ -1,3 +1,44 @@
+body {
+    
+    background-image: url("../images/background.jpg");
+
+}
+
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid  black;
+    color: whitesmoke;
+}
+
+td {
+
+    padding: 5px 5px;
+
+}
+
+div.minimalDiv {
+
+    background-color:  #cc6600;
+    border: 3px solid transparent;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 10px 10px;
+
+}
+
+a.minimalButton {
+
+    border: 3px solid black;
+    border-radius: 5px;
+    color: white;
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 10px 10px;
+    text-decoration: none;
+
+}
+
+a.minimalButton:hover {
+
+    background-color: black;
+
 }
