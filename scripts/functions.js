@@ -1,8 +1,8 @@
-
-
+let index = 1;
 function generateTable() {
     let _table = document.getElementById("tableResults");
     _table.innerHTML = "";
+    index = 1;
 
     let _r = document.getElementById("r").value;
     let _c = document.getElementById("c").value;
@@ -13,23 +13,23 @@ function generateTable() {
 
     let _pow = 0;
 
-    addToTable(null, null, true); //setuppo la tabella
+    addToTable(null, true); //setuppo la tabella
     for(let i = 0; i < 20; i++) {
         
         if (i % 4 == 0 && i != 0)
             _pow++;
-        addToTable(_offset[i % 4] * Math.pow(10, _pow), i);
+        addToTable(_offset[i % 4] * Math.pow(10, _pow), false);
         
     }
-    addToTable(Math.round(_ft * 0.01), 1);
-    addToTable(Math.round(_ft * 0.1), 1);
-    addToTable(Math.round(_ft), 1);
-    addToTable(Math.round(_ft * 10), 1);
-    addToTable(Math.round(_ft * 100), 1);
+    addToTable(Math.round(_ft * 0.01), false);
+    addToTable(Math.round(_ft * 0.1), false);
+    addToTable(Math.round(_ft), false);
+    addToTable(Math.round(_ft * 10), false);
+    addToTable(Math.round(_ft * 100), false);
 
 }
 
-function addToTable(f, i, flag) {
+function addToTable(f, flag) {
     let _table = document.getElementById("tableResults");
     let _tableRow = document.createElement("tr");
     let _tableCell;
@@ -86,7 +86,7 @@ function addToTable(f, i, flag) {
     let _adb = round(20 * Math.log(_a));
 
     _tableCell = document.createElement("td");
-    _tableCell.appendChild(document.createTextNode(i + 1)); //Aggiunge l'index alla tabella
+    _tableCell.appendChild(document.createTextNode(index)); //Aggiunge l'index alla tabella
     _tableRow.appendChild(_tableCell); //Aggiunge la cella alla riga
 
     _tableCell = document.createElement("td");
@@ -118,6 +118,7 @@ function addToTable(f, i, flag) {
     _tableRow.appendChild(_tableCell); //Aggiunge la cella alla riga
 
     _table.appendChild(_tableRow); //Aggiunge la riga alla tebella
+    index++;
 }
 
 function mod(w, r, c, v) {

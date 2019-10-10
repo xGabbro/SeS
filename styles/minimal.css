@@ -17,11 +17,12 @@ td {
 
 div.minimalDiv {
 
-    background-color:  #cc6600;
-    border: 3px solid transparent;
+    background-color:  #2e3536;
+    border: 3px solid #34ebd2;
     border-radius: 5px;
     display: inline-block;
     margin: 10px 10px;
+    width: 600px;
 
 }
 
