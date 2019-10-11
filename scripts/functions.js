@@ -81,9 +81,9 @@ function addToTable(f, flag) {
 
     let _module = round(mod(_w, _r, _c, _v));
     let _phase = round(phase(_w, _r, _c));
-    let _logf = round(Math.log(f));
+    let _logf = round(Math.log10(f));
     let _a = round(_module / _v);
-    let _adb = round(20 * Math.log(_a));
+    let _adb = round(20 * Math.log10(Math.abs(_a)));
 
     _tableCell = document.createElement("td");
     _tableCell.appendChild(document.createTextNode(index)); //Aggiunge l'index alla tabella
@@ -137,9 +137,9 @@ function phase(w, r, c) {
 }
 
 function round(valore) {
-    var ris = valore * Math.pow(10, 2);
+    var ris = valore * Math.pow(10, 3);
     ris = Math.round(ris);
-    return ris / Math.pow(10, 2);
+    return ris / Math.pow(10, 3);
 }
 
 function getlength(number) {
