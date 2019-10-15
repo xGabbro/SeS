@@ -22,7 +22,7 @@ div.minimalDiv {
     border-radius: 5px;
     display: inline-block;
     margin: 10px 10px;
-    width: 600px;
+    width: auto;
 
 }
 
@@ -47,5 +47,12 @@ a.minimalButton:hover {
 p.minimalText {
 
     color: whitesmoke;
+    display: inline-block;
+}
+
+img {
+
+    display: inline-block;
+    vertical-align: middle;
 
 }
