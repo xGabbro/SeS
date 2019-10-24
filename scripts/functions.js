@@ -45,7 +45,7 @@ function generateTable() {
     index = 1; //Azzero il contatore
 
     let _capacitorUnit = document.getElementById("cunit").value;
-    let _resistorUnit = document.getElementById("cunit").value;
+    let _resistorUnit = document.getElementById("runit").value;
 
     resistor = Number(document.getElementById("r").value) * _resistorUnit;
     capacitor = Number(document.getElementById("c").value) / _capacitorUnit;
