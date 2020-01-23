@@ -36,6 +36,9 @@ function setup() {
 }
 
 function generateTable() {
+    
+    let tableDiv = document.getElementById("tableDiv");
+    tableDiv.setAttribute("style", "visibility: visible");
 
     //Pulisco la tabella
     let _table = document.getElementById("tableResults");
